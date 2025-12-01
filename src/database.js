@@ -12,7 +12,7 @@ const connection = async () => {
     }
 
     const conn = await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: 'interia',                // ✅ fuerza base de datos
+      dbName: 'InterIa',                // ✅ fuerza base de datos
       serverSelectionTimeoutMS: 10000
     })
 
@@ -26,3 +26,4 @@ const connection = async () => {
 }
 
 export default connection
+
