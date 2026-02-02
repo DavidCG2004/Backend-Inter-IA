@@ -11,7 +11,7 @@ import Usuario from './models/Usuario.js';
 dotenv.config();
 
 // Ejecutamos la conexión (asegúrate que connection() sea async y use process.env.MONGODB_URI)
-connection();
+await connection();
 
 const server = http.createServer(app);
 
@@ -102,4 +102,5 @@ const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
     console.log(`🚀 Server running in ${process.env.NODE_ENV || 'development'} mode`);
     console.log(`📡 WebSocket server listening on port ${PORT}`);
+
 });
