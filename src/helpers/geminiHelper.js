@@ -5,7 +5,7 @@ dotenv.config()
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY)
 
 
-const MODEL_NAME = "gemini-2.5-flash";
+const MODEL_NAME = "gemini-2.5-pro";
 const HF_MODEL_URL = "https://router.huggingface.co/hf-inference/models/cardiffnlp/twitter-roberta-base-sentiment-latest";
 
 // Configuración para forzar respuesta JSON limpia
@@ -278,6 +278,7 @@ const parseCVToProfile = async (text) => {
         return null;
     }
 }
+
 
 
 export { generateInterviewQuestions, evaluateInterviewAnswers, parseCVToProfile }
