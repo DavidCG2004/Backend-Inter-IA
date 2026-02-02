@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import passport from 'passport'
 import routerAdministrador from './routers/administrador_routes.js'
 import routerUsuario from './routers/usuario_routes.js'
 import routerInterview from './routers/simulation_routes.js'
@@ -28,3 +29,4 @@ app.use((req,res)=>res.status(404).send("Endpoint no encontrado - 404"))
 
 
 export default app
+
