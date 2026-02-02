@@ -11,6 +11,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
+app.use(passport.initialize());
 
 app.set('port', process.env.PORT || 3000)
 
@@ -24,5 +25,6 @@ app.use('/api/donation', donationRoutes)
 app.use('/api/chat', chatRoutes)
 
 app.use((req,res)=>res.status(404).send("Endpoint no encontrado - 404"))
+
 
 export default app
